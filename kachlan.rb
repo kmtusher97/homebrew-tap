@@ -13,7 +13,7 @@ class Kachlan < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/kmtusher97/kachlan/releases/download/v0.5.0/kachlan_darwin_amd64.tar.gz"
-      sha256 "6c2f1af5afab625381f9acff659c3aa3ea655a84d81f0af83e7bb9f1bdc32db1"
+      sha256 "8d3b923de3b552b38906f076ac7fd413b70ba84246099080e5381a231d916870"
 
       define_method(:install) do
         bin.install "kachlan"
@@ -21,7 +21,7 @@ class Kachlan < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/kmtusher97/kachlan/releases/download/v0.5.0/kachlan_darwin_arm64.tar.gz"
-      sha256 "fc076ba2502e57c586db31680a97e61c20596c6ba3ee727e7d296428a14c6e53"
+      sha256 "0753e066c9302ea3e5049f54e39515d94e5e7f2de5ab08018d54b59c64b1f2d9"
 
       define_method(:install) do
         bin.install "kachlan"
@@ -32,14 +32,14 @@ class Kachlan < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/kmtusher97/kachlan/releases/download/v0.5.0/kachlan_linux_amd64.tar.gz"
-      sha256 "f48ecd1753b2035719e552288a8125278596a09e731e74645de1c9115319b1e7"
+      sha256 "7df693a85df8cb372a50d8d6652ea2ac813ae532fca543a43b53b5543fe985ee"
       define_method(:install) do
         bin.install "kachlan"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/kmtusher97/kachlan/releases/download/v0.5.0/kachlan_linux_arm64.tar.gz"
-      sha256 "c7178507a5c97779a4c7375630a42c0434952662b46fa2edf0e584438257cd0d"
+      sha256 "1bad3388fe4dda0db34141460867e2bec49d04f605b632e15ae1690c076b731d"
       define_method(:install) do
         bin.install "kachlan"
       end

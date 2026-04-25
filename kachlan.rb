@@ -5,23 +5,23 @@
 class Kachlan < Formula
   desc "Fast video compression powered by ffmpeg"
   homepage "https://github.com/kmtusher97/kachlan"
-  version "0.4.1"
+  version "0.5.0"
   license "MIT"
 
   depends_on "ffmpeg"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kmtusher97/kachlan/releases/download/v0.4.1/kachlan_darwin_amd64.tar.gz"
-      sha256 "7f089fa5b62dba7f779b9e3fe1d90fd554b7e750b92f645bea9f9a6d2efdcdad"
+      url "https://github.com/kmtusher97/kachlan/releases/download/v0.5.0/kachlan_darwin_amd64.tar.gz"
+      sha256 "6c2f1af5afab625381f9acff659c3aa3ea655a84d81f0af83e7bb9f1bdc32db1"
 
       define_method(:install) do
         bin.install "kachlan"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kmtusher97/kachlan/releases/download/v0.4.1/kachlan_darwin_arm64.tar.gz"
-      sha256 "9b6cf2125df3db080e673d7a8eaaed4fe46d8e4dcd551ebf2f553a3c472afb2a"
+      url "https://github.com/kmtusher97/kachlan/releases/download/v0.5.0/kachlan_darwin_arm64.tar.gz"
+      sha256 "fc076ba2502e57c586db31680a97e61c20596c6ba3ee727e7d296428a14c6e53"
 
       define_method(:install) do
         bin.install "kachlan"
@@ -31,15 +31,15 @@ class Kachlan < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kmtusher97/kachlan/releases/download/v0.4.1/kachlan_linux_amd64.tar.gz"
-      sha256 "81bb717bebef3f86286b625311a9d60d81374b52ab1622516d87e345eb690147"
+      url "https://github.com/kmtusher97/kachlan/releases/download/v0.5.0/kachlan_linux_amd64.tar.gz"
+      sha256 "f48ecd1753b2035719e552288a8125278596a09e731e74645de1c9115319b1e7"
       define_method(:install) do
         bin.install "kachlan"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kmtusher97/kachlan/releases/download/v0.4.1/kachlan_linux_arm64.tar.gz"
-      sha256 "2f91becd11418c4e692a1acebc14bd79e25df832e516481b07ffcd1d13abc1b8"
+      url "https://github.com/kmtusher97/kachlan/releases/download/v0.5.0/kachlan_linux_arm64.tar.gz"
+      sha256 "c7178507a5c97779a4c7375630a42c0434952662b46fa2edf0e584438257cd0d"
       define_method(:install) do
         bin.install "kachlan"
       end
